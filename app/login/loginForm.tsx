@@ -86,13 +86,6 @@ export default function LoginForm() {
                         >
                             {loading ? "ログイン中..." : "ログイン"}
                         </Button>
-                        <Button
-                            type="button"
-                            className="w-full"
-                            onClick={() => router.push("/pms/user_register?mode=create&admin=true")}
-                        >
-                            管理者アカウント作成
-                        </Button>
                     </form>
                 </div>
             </div>
