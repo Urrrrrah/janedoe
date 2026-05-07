@@ -25,10 +25,21 @@ export const {handlers, auth, signIn, signOut} = NextAuth({
                 const userId = credentials.user_id
                 const password = credentials.password
 
-                const user = await prisma.sys_account.findUnique({
+                const account = await prisma.sys_account.findUnique({
                     where: {
                         user_id: userId
                     },
+                });
+
+                const user = await prisma.sys_user.findUnique({
+                    where: {
+                        user_id: userId
+                    },
+                    select:{
+                        sys_id: true,
+                        user_id: true,
+                        active: true,
+                    }
                 });
 
                 const user_role = await prisma.sys_user_role.findMany({
@@ -41,11 +52,12 @@ export const {handlers, auth, signIn, signOut} = NextAuth({
                 });
                 const roles = user_role.map(item => item.role);
 
+                if (!account || !account.active) return null
                 if (!user || !user.active) return null
 
                 const valid = await bcrypt.compare(
                     password,
-                    user.password_hash
+                    account.password_hash
                 );
 
                 if (!valid) {

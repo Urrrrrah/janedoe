@@ -29,7 +29,7 @@ export default function LoginForm() {
                 setLoading(false);
 
             } else {
-                router.push("/pms/list/login_logs");
+                router.push("/pms/index");
                 router.refresh();
             }
         } catch (error) {

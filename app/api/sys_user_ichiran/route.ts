@@ -1,15 +1,11 @@
-import {prisma} from "@/lib/prisma";
-
 export const runtime = "nodejs";
-import {NextResponse, NextRequest} from 'next/server';
-import {SysUser} from "@/types/record";
-import {timeFormat} from "@/app/service/generate-util";
+import {NextResponse} from 'next/server';
 import {getAllUsers} from "@/lib/services/user.service";
-import {checkListPermission, sessionCheck} from "@/lib/services/permission.service";
+import {sessionCheck} from "@/lib/services/permission.service";
 
 const SYSTEM_ERROR = 'システムエラー';
 
-export async function GET(request: NextRequest) {
+export async function GET() {
     try {
         // 認証チェック
         const loggedUser = await sessionCheck();
@@ -18,7 +14,7 @@ export async function GET(request: NextRequest) {
         if (!loggedUser.roles.includes("admin")) {
             return NextResponse.json({
                 success: false,
-                errors: "権限ありません。",
+                error: "権限ありません。",
             }, {status: 403});
         }
 

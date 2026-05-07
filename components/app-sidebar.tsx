@@ -26,7 +26,7 @@ const navItems = [
     {title: "Project情報", url: "/pms/list/project_ichiran?page=1", icon: BookOpen},
     {title: "Subproject情報", url: "/pms/list/subproject_ichiran", icon: BookOpenText},
     {title: "CSVインポート", url: "/pms/csv_import", icon: ArrowBigUp },
-    {title: "ユーザー情報編集", url: "/pms/user_register?mode=create&self=true", icon: Users},
+    {title: "ユーザー情報編集", url: "/pms/user_register?mode=update", icon: Users},
     {title: "管理者機能▼", url:"", icon: ArrowBigDown },
     {title: "アカウント登録", url: "/pms/user_register?mode=create", icon: Users},
     {title: "ユーザー情報一覧", url: "/pms/list/sys_user_ichiran", icon: Users},

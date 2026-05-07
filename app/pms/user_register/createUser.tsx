@@ -1,20 +1,24 @@
 "use client";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import {Button} from "@/components/ui/button";
+import {Input} from "@/components/ui/input";
+import {Label} from "@/components/ui/label";
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {SendHorizontal} from "lucide-react";
 import {useForm} from "react-hook-form";
 import {NewUserForm} from "@/types/record";
 import {zodResolver} from "@hookform/resolvers/zod";
 import {useRouter} from "next/navigation";
-import {ApiResponse, UpdateResponse} from "@/types/api";
+import {ApiResponse, SysUserFormResponse, UpdateResponse} from "@/types/api";
 import {newUserSchema} from "@/lib/validator/user_register";
 import {useSearchParams} from "next/dist/client/components/navigation";
+import {useEffect} from "react";
+import {apiFetch} from "@/lib/http";
 
 const LOGIN = "/login";
+const INDEX = "/pms/index";
 const USER_REGISTER = (mode: string, admin: string) =>
     `/api/user_register?mode=${mode}&admin=${admin}`;
+
 
 export default function CreateForm() {
     const {
@@ -27,6 +31,8 @@ export default function CreateForm() {
 
     const searchParams = useSearchParams();
     const admin = searchParams.get('admin') || "false";
+    const mode = searchParams.get('mode') || 'create';
+    const sys_id = searchParams.get('sys_id') || '';
 
     const router = useRouter();
 
@@ -43,6 +49,29 @@ export default function CreateForm() {
         alert(result.data?.message);
         router.push(LOGIN);
     }
+
+    useEffect(() => {
+        if (mode !== "create") return;
+        const fetchData = async () => {
+            try {
+                const result = await apiFetch<SysUserFormResponse>('/api/user_register?mode=create');
+                if (!result) return;
+
+                if (!result.success) {
+                    console.error(result.error);
+                    router.push(INDEX);
+                    return;
+                }
+
+                if (!result.data) return;
+            } catch (error) {
+                console.error("Fetch error:", error);
+                router.push(INDEX);
+            }
+        }
+        void fetchData();
+
+    }, [mode, sys_id, router]);
 
     return (
         <main className="min-h-screen bg-slate-50/50 p-6 md:p-10 flex justify-center items-start">
@@ -157,7 +186,7 @@ export default function CreateForm() {
                                 className="w-full group"
                                 onClick={handleSubmit(onSubmit)}>
                             提出
-                            <SendHorizontal className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
+                            <SendHorizontal className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1"/>
                         </Button>
                     </form>
                 </CardContent>

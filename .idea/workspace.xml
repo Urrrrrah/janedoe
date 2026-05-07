@@ -4,7 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0304baca-e4d0-4f13-88ff-c04d6fdaeeed" name="Changes" comment="20260502" />
+    <list default="true" id="0304baca-e4d0-4f13-88ff-c04d6fdaeeed" name="Changes" comment="20260502">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/sys_user_ichiran/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/sys_user_ichiran/route.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/user_register/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/user_register/route.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/login/loginForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/login/loginForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/pms/user_register/createUser.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/pms/user_register/createUser.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/app-header.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/app-sidebar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/app-sidebar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/auth.config.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/auth.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/auth.ts" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -59,6 +70,7 @@
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "git-widget-placeholder": "master",
     "javascript.preferred.runtime.type.id": "node",
     "js.debugger.nextJs.config.created.client": "true",
     "js.debugger.nextJs.config.created.server": "true",
@@ -179,7 +191,7 @@
       <workItem from="1777867835543" duration="12525000" />
       <workItem from="1777962844928" duration="27552000" />
       <workItem from="1778040188899" duration="30336000" />
-      <workItem from="1778136045376" duration="6967000" />
+      <workItem from="1778136045376" duration="15189000" />
     </task>
     <task id="LOCAL-00001" summary="20260411">
       <option name="closed" value="true" />
