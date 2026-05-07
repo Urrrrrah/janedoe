@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="0304baca-e4d0-4f13-88ff-c04d6fdaeeed" name="Changes" comment="20260502" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
+      </list>
+    </option>
+  </component>
+  <component name="FormatOnSaveOptions">
+    <option name="myRunOnSave" value="false" />
+    <option name="myAllFileTypesSelected" value="true" />
+    <option name="mySelectedFileTypes">
+      <set />
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Urrrrrah&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Urrrrrah/janedoe.git&quot;,
+    &quot;accountId&quot;: &quot;3751b88e-1f5f-4717-9a0d-0c1e44456b24&quot;
+  }
+}</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="3BaANuv25ENf4UeOa3goh2XOml1" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "javascript.preferred.runtime.type.id": "node",
+    "js.debugger.nextJs.config.created.client": "true",
+    "js.debugger.nextJs.config.created.server": "true",
+    "last_opened_file_path": "C:/Users/ZXG19/WebstormProjects/janedoe/app/pms/user_register",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "npm.Next.js: server-side.executor": "Run",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
+    "ts.external.directory.path": "C:\\Users\\ZXG19\\WebstormProjects\\janedoe\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
+    ]
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ZXG19\WebstormProjects\janedoe\app\pms\user_register" />
+      <recent name="C:\Users\ZXG19\WebstormProjects\janedoe\app\api\sys_user" />
+      <recent name="C:\Users\ZXG19\WebstormProjects\janedoe\lib\validator" />
+      <recent name="C:\Users\ZXG19\WebstormProjects\janedoe\app\pms\sys_user" />
+      <recent name="C:\Users\ZXG19\WebstormProjects\janedoe\app\pms\list\sys_user_ichiran" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ZXG19\WebstormProjects\janedoe\types" />
+      <recent name="C:\Users\ZXG19\WebstormProjects\janedoe\app\pms\list" />
+      <recent name="C:\Users\ZXG19\WebstormProjects\janedoe\app\api\auth\[...nextauth]" />
+      <recent name="C:\Users\ZXG19\WebstormProjects\janedoe\app\service" />
+      <recent name="C:\Users\ZXG19\WebstormProjects\janedoe\lib" />
+    </key>
+  </component>
+  <component name="RunManager" selected="npm.Next.js: server-side">
+    <configuration name="Next.js: debug client-side" type="JavascriptDebugType" uri="http://localhost:3000/">
+      <method v="2" />
+    </configuration>
+    <configuration name="Next.js: server-side" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-WS-253.29346.242" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0304baca-e4d0-4f13-88ff-c04d6fdaeeed" name="Changes" comment="" />
+      <created>1774716772041</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1774716772041</updated>
+      <workItem from="1774716773503" duration="1192000" />
+      <workItem from="1774763408666" duration="18671000" />
+      <workItem from="1774866271169" duration="615000" />
+      <workItem from="1774880788503" duration="1855000" />
+      <workItem from="1774916205411" duration="20445000" />
+      <workItem from="1774952313527" duration="12956000" />
+      <workItem from="1774968010454" duration="6357000" />
+      <workItem from="1775279883250" duration="21917000" />
+      <workItem from="1775361418385" duration="29854000" />
+      <workItem from="1775481765254" duration="9492000" />
+      <workItem from="1775527158268" duration="2398000" />
+      <workItem from="1775565543941" duration="6006000" />
+      <workItem from="1775580422779" duration="2353000" />
+      <workItem from="1775582803082" duration="67000" />
+      <workItem from="1775614826458" duration="1985000" />
+      <workItem from="1775616884392" duration="413000" />
+      <workItem from="1775617317376" duration="16293000" />
+      <workItem from="1775641357808" duration="9851000" />
+      <workItem from="1775741067463" duration="3308000" />
+      <workItem from="1775794985286" duration="11663000" />
+      <workItem from="1775818247805" duration="3694000" />
+      <workItem from="1775830397201" duration="8181000" />
+      <workItem from="1775874479449" duration="1985000" />
+      <workItem from="1775884045838" duration="17794000" />
+      <workItem from="1775911540756" duration="5792000" />
+      <workItem from="1775965112771" duration="515000" />
+      <workItem from="1775972252824" duration="16929000" />
+      <workItem from="1776042807004" duration="6177000" />
+      <workItem from="1776090587875" duration="8403000" />
+      <workItem from="1776130985559" duration="1921000" />
+      <workItem from="1776132935521" duration="8820000" />
+      <workItem from="1776158462390" duration="20475000" />
+      <workItem from="1776265076328" duration="5673000" />
+      <workItem from="1776314250845" duration="17734000" />
+      <workItem from="1776439327408" duration="3387000" />
+      <workItem from="1776514806157" duration="6896000" />
+      <workItem from="1776786338851" duration="2829000" />
+      <workItem from="1776839343525" duration="20429000" />
+      <workItem from="1777009516578" duration="5220000" />
+      <workItem from="1777103349937" duration="18166000" />
+      <workItem from="1777132732770" duration="4545000" />
+      <workItem from="1777181152812" duration="5324000" />
+      <workItem from="1777187724686" duration="26962000" />
+      <workItem from="1777253290539" duration="7201000" />
+      <workItem from="1777303617201" duration="2062000" />
+      <workItem from="1777473593311" duration="2785000" />
+      <workItem from="1777477000987" duration="378000" />
+      <workItem from="1777534550634" duration="12509000" />
+      <workItem from="1777614922732" duration="16140000" />
+      <workItem from="1777700918471" duration="23759000" />
+      <workItem from="1777782741950" duration="4265000" />
+      <workItem from="1777801552389" duration="8463000" />
+      <workItem from="1777867835543" duration="12525000" />
+      <workItem from="1777962844928" duration="27552000" />
+      <workItem from="1778040188899" duration="30336000" />
+      <workItem from="1778136045376" duration="6967000" />
+    </task>
+    <task id="LOCAL-00001" summary="20260411">
+      <option name="closed" value="true" />
+      <created>1775914019188</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1775914019188</updated>
+    </task>
+    <task id="LOCAL-00002" summary="20260412">
+      <option name="closed" value="true" />
+      <created>1776007110811</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1776007110811</updated>
+    </task>
+    <task id="LOCAL-00003" summary="20260413">
+      <option name="closed" value="true" />
+      <created>1776098209741</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1776098209741</updated>
+    </task>
+    <task id="LOCAL-00004" summary="20260413">
+      <option name="closed" value="true" />
+      <created>1776144327130</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1776144327130</updated>
+    </task>
+    <task id="LOCAL-00005" summary="20260413">
+      <option name="closed" value="true" />
+      <created>1776181784188</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1776181784188</updated>
+    </task>
+    <task id="LOCAL-00006" summary="20260415">
+      <option name="closed" value="true" />
+      <created>1776271660745</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1776271660745</updated>
+    </task>
+    <task id="LOCAL-00007" summary="20260415">
+      <option name="closed" value="true" />
+      <created>1776353163371</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1776353163371</updated>
+    </task>
+    <task id="LOCAL-00008" summary="20260415">
+      <option name="closed" value="true" />
+      <created>1776522751791</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1776522751791</updated>
+    </task>
+    <task id="LOCAL-00009" summary="20260415">
+      <option name="closed" value="true" />
+      <created>1777009760715</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1777009760715</updated>
+    </task>
+    <task id="LOCAL-00010" summary="20260426">
+      <option name="closed" value="true" />
+      <created>1777222256226</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1777222256226</updated>
+    </task>
+    <task id="LOCAL-00011" summary="20260427">
+      <option name="closed" value="true" />
+      <created>1777305683667</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1777305683667</updated>
+    </task>
+    <task id="LOCAL-00012" summary="20260502">
+      <option name="closed" value="true" />
+      <created>1777743095014</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1777743095014</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$" />
+    </ignored-roots>
+    <MESSAGE value="20260411" />
+    <MESSAGE value="20260412" />
+    <MESSAGE value="20260413" />
+    <MESSAGE value="20260415" />
+    <MESSAGE value="20260426" />
+    <MESSAGE value="20260427" />
+    <MESSAGE value="20260502" />
+    <option name="LAST_COMMIT_MESSAGE" value="20260502" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/prisma/seed.ts</url>
+          <line>14</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

@@ -1,0 +1,107 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../app/generated/prisma"
+}
+
+datasource db {
+  provider = "mysql"
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model sys_account {
+  sys_id        String   @id @unique(map: "sys_id_UNIQUE") @db.Char(45)
+  user_id       String   @unique(map: "username_UNIQUE") @db.VarChar(45)
+  password_hash String   @db.VarChar(255)
+  created       DateTime @default(now()) @db.DateTime(0)
+  updated       DateTime @updatedAt @db.DateTime(0)
+  created_by    String   @db.VarChar(45)
+  updated_by    String   @db.VarChar(45)
+  active        Boolean  @default(true)
+}
+
+model sys_login_context {
+  sys_id     String   @id @unique(map: "sys_id_UNIQUE") @db.Char(45)
+  user_id    String   @db.VarChar(45)
+  login_time DateTime @db.DateTime(0)
+  status     String   @db.VarChar(45)
+  created    DateTime @default(now()) @db.DateTime(0)
+  updated    DateTime @updatedAt @db.DateTime(0)
+  created_by String   @db.VarChar(45)
+  updated_by String   @db.VarChar(45)
+}
+
+model sys_user {
+  sys_id     String   @id @unique(map: "sys_id_UNIQUE") @db.Char(45)
+  user_id    String   @unique(map: "username_UNIQUE") @db.VarChar(45)
+  company    String   @db.VarChar(255)
+  email      String   @unique @db.VarChar(255)
+  first_name String   @db.VarChar(255)
+  last_name  String   @db.VarChar(255)
+  created    DateTime @default(now()) @db.DateTime(0)
+  updated    DateTime @updatedAt @db.DateTime(0)
+  created_by String   @db.VarChar(45)
+  updated_by String   @db.VarChar(45)
+  active     Boolean  @default(true)
+}
+
+model project_joho_ichiran {
+  sys_id            String   @id @unique(map: "sys_id_UNIQUE") @db.Char(45)
+  number            Int      @unique(map: "project_id_UNIQUE") @default(autoincrement())
+  project_id        String?  @db.VarChar(12)
+  project_type      String   @db.VarChar(45)
+  department        String   @db.VarChar(45)
+  project_name      String   @db.VarChar(45)
+  short_description String?  @db.VarChar(255)
+  start_date        DateTime @db.Date
+  end_date          DateTime @db.Date
+  created           DateTime @default(now()) @db.DateTime(0)
+  updated           DateTime @updatedAt @db.DateTime(0)
+  created_by        String   @db.VarChar(45)
+  updated_by        String   @db.VarChar(45)
+  active            Boolean  @default(true)
+}
+
+model subproject_joho_ichiran {
+  sys_id            String   @id @unique(map: "sys_id_UNIQUE") @db.Char(45)
+  number            Int      @unique(map: "project_id_UNIQUE") @default(autoincrement())
+  subproject_id     String?  @unique(map: "subproject_id_UNIQUE") @db.VarChar(12)
+  joi_project_id    String   @db.VarChar(12)
+  joi_project_ref   String   @db.Char(255)
+  subproject_name   String   @db.VarChar(45)
+  short_description String?  @db.VarChar(255)
+  start_date        DateTime @db.Date
+  end_date          DateTime @db.Date
+  created           DateTime @default(now()) @db.DateTime(0)
+  updated           DateTime @updatedAt @db.DateTime(0)
+  created_by        String   @db.VarChar(45)
+  updated_by        String   @db.VarChar(45)
+  active            Boolean  @default(true)
+}
+
+model sannsho_kengen_list {
+  sys_id              String   @id @unique(map: "sys_id_UNIQUE") @db.Char(45)
+  reference_table     String   @db.VarChar(255)
+  reference_ticket    String   @db.Char(255)
+  reference_ticket_id String   @db.VarChar(12)
+  user_id             String   @db.VarChar(45)
+  user_name           String   @db.VarChar(45)
+  user_sys_id         String   @db.Char(45)
+  created             DateTime @default(now()) @db.DateTime(0)
+  updated             DateTime @updatedAt @db.DateTime(0)
+  created_by          String   @db.VarChar(45)
+  updated_by          String   @db.VarChar(45)
+  active              Boolean  @default(true)
+}
+
+model sys_user_role {
+  sys_id     String   @id @unique(map: "sys_id_UNIQUE") @db.Char(45)
+  role       String   @db.VarChar(10)
+  user_id    String   @db.VarChar(45)
+  start_date DateTime @db.DateTime(0)
+  end_date   DateTime @db.DateTime(0)
+  active     Boolean  @default(true)
+  created    DateTime @default(now()) @db.DateTime(0)
+  updated    DateTime @updatedAt @db.DateTime(0)
+  created_by String   @db.VarChar(45)
+  updated_by String   @db.VarChar(45)
+}
