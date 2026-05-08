@@ -4,7 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0304baca-e4d0-4f13-88ff-c04d6fdaeeed" name="Changes" comment="権限チェック更新&#10;Response修正" />
+    <list default="true" id="0304baca-e4d0-4f13-88ff-c04d6fdaeeed" name="Changes" comment="seedで最初のアカウント作成できるため、ログイン画面の「アカウント作成」ボタンを削除">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/subproject_ichiran/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/subproject_ichiran/route.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/sys_user_ichiran/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/sys_user_ichiran/route.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/user_register/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/user_register/route.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/pms/list/login_logs/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/pms/list/login_logs/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/pms/list/project_ichiran/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/pms/list/project_ichiran/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/pms/list/subproject_ichiran/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/pms/list/subproject_ichiran/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/pms/list/sys_user_ichiran/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/pms/list/sys_user_ichiran/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/pms/user_register/updateUser.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/pms/user_register/updateUser.tsx" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -26,6 +36,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -52,34 +67,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;javascript.preferred.runtime.type.id&quot;: &quot;node&quot;,
-    &quot;js.debugger.nextJs.config.created.client&quot;: &quot;true&quot;,
-    &quot;js.debugger.nextJs.config.created.server&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/ZXG19/WebstormProjects/janedoe/app/pms/user_register&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;npm.Next.js: server-side.executor&quot;: &quot;Run&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\ZXG19\\WebstormProjects\\janedoe\\node_modules\\typescript\\lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "git-widget-placeholder": "dev",
+    "javascript.preferred.runtime.type.id": "node",
+    "js.debugger.nextJs.config.created.client": "true",
+    "js.debugger.nextJs.config.created.server": "true",
+    "last_opened_file_path": "C:/Users/ZXG19/WebstormProjects/janedoe/app/pms/user_register",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "npm.Next.js: server-side.executor": "Run",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
+    "ts.external.directory.path": "C:\\Users\\ZXG19\\WebstormProjects\\janedoe\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\ZXG19\WebstormProjects\janedoe\app\pms\user_register" />
@@ -181,6 +196,7 @@
       <workItem from="1777962844928" duration="27552000" />
       <workItem from="1778040188899" duration="30336000" />
       <workItem from="1778136045376" duration="15305000" />
+      <workItem from="1778194684357" duration="7018000" />
     </task>
     <task id="LOCAL-00001" summary="20260411">
       <option name="closed" value="true" />
@@ -286,7 +302,15 @@
       <option name="project" value="LOCAL" />
       <updated>1778174616958</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="seedで最初のアカウント作成できるため、ログイン画面の「アカウント作成」ボタンを削除">
+      <option name="closed" value="true" />
+      <created>1778194896784</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1778194896785</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -315,7 +339,8 @@
     <MESSAGE value="20260427" />
     <MESSAGE value="20260502" />
     <MESSAGE value="権限チェック更新&#10;Response修正" />
-    <option name="LAST_COMMIT_MESSAGE" value="権限チェック更新&#10;Response修正" />
+    <MESSAGE value="seedで最初のアカウント作成できるため、ログイン画面の「アカウント作成」ボタンを削除" />
+    <option name="LAST_COMMIT_MESSAGE" value="seedで最初のアカウント作成できるため、ログイン画面の「アカウント作成」ボタンを削除" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -5,7 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { SendHorizontal } from "lucide-react";
-import {useForm, useWatch} from "react-hook-form";
+import {useForm} from "react-hook-form";
 import {SysUserForm} from "@/types/record";
 import {zodResolver} from "@hookform/resolvers/zod";
 import {useRouter} from "next/navigation";
@@ -27,7 +27,6 @@ export default function UpdateForm() {
         register,
         handleSubmit,
         reset,
-        control,
         formState: {errors},
     } = useForm<SysUserForm>({
         resolver: zodResolver(userSchema),
@@ -50,6 +49,7 @@ export default function UpdateForm() {
             alert(result.error ?? "エラー発生しました。");
         } else {
             alert(result.data?.message);
+            router.push("/pms/user_register?mode=update");
         }
     }
 

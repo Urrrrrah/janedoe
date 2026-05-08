@@ -12,7 +12,7 @@ import {
 import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
 import {apiFetch} from "@/lib/http";
 import {ProjectJohoIchiran} from "@/types/record";
-import {Filter, Plus} from "lucide-react";
+import {Plus} from "lucide-react";
 import Link from "next/link";
 import {ProjectJohoIchiranResponse} from "@/types/api";
 
@@ -60,9 +60,9 @@ export default function UserPage() {
                     </p>
                 </div>
                 <div className="flex items-center gap-2">
-                    <Button variant="outline" size="sm">
-                        <Filter className="w-4 h-4 mr-2"/> フィルター
-                    </Button>
+                    {/*<Button variant="outline" size="sm">*/}
+                    {/*    <Filter className="w-4 h-4 mr-2"/> フィルター*/}
+                    {/*</Button>*/}
                     <Button size="sm" variant="outline" className="h-8 gap-1" asChild>
                         <Link href={NEW_PROJECT_SHOSAI}>
                             <Plus className="w-4 h-4"/>
