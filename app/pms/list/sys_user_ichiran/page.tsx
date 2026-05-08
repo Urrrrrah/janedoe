@@ -1,6 +1,5 @@
 "use client";
 import {useEffect, useState} from "react";
-import {Button} from "@/components/ui/button";
 import {
     Table,
     TableBody,
@@ -12,21 +11,22 @@ import {
 import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
 import {apiFetch} from "@/lib/http";
 import {SysUser} from "@/types/record";
-import {Filter, Plus} from "lucide-react";
 import Link from "next/link";
 import {SysUserIchiranResponse} from "@/types/api";
+import {useRouter} from "next/navigation";
 
 const TABLE_NAME = "ユーザー情報一覧";
 const TITLE = "システム内のすべての" + TABLE_NAME + "を閲覧・管理できます";
+const INDEX = "/pms/index";
 const RECORD_COUNT = (count: number) => `全 ${count} 件のレコード`;
 const NO_RECORD_MESSAGE = "記録が存在しません";
-const NEW_USER_SHOSAI = "/pms/user_info?mode=create";
 const UPDATE_USER_SHOSAI = (sys_id: string) => `/pms/user_register?mode=update&sys_id=${sys_id}`;
 
 
 export default function UserPage() {
 
     const [recs, setRecs] = useState<SysUser[]>([]);
+    const router = useRouter();
 
     useEffect(() => {
         const fetchData = async() => {
@@ -36,17 +36,19 @@ export default function UserPage() {
 
                 if (!result.success) {
                     console.error(result.error);
+                    router.push(INDEX);
                     return;
                 }
 
                 setRecs(result.data?.sysusers ?? []);
             } catch (error) {
                 console.error("Fetch error:", error);
+                router.push(INDEX);
             }
         }
         void fetchData();
 
-    }, []);
+    }, [router]);
 
     return (
         <main className="p-6 md:p-10 space-y-6 bg-slate-50/30 min-h-screen">
@@ -58,15 +60,9 @@ export default function UserPage() {
                     </p>
                 </div>
                 <div className="flex items-center gap-2">
-                    <Button variant="outline" size="sm">
-                        <Filter className="w-4 h-4 mr-2"/> フィルター
-                    </Button>
-                    <Button size="sm" variant="outline" className="h-8 gap-1" asChild>
-                        <Link href={NEW_USER_SHOSAI}>
-                            <Plus className="w-4 h-4"/>
-                            追加
-                        </Link>
-                    </Button>
+                    {/*<Button variant="outline" size="sm">*/}
+                    {/*    <Filter className="w-4 h-4 mr-2"/> フィルター*/}
+                    {/*</Button>*/}
                 </div>
             </div>
             <div className="p-6 md:p-10 space-y-6 bg-slate-50/30 min-h-screen">

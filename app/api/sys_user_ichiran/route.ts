@@ -20,9 +20,9 @@ export async function GET() {
 
         const result = await getAllUsers();
 
-        return NextResponse.json({
+        return NextResponse.json(
             result,
-        }, {status: 200});
+            {status: 200});
 
     } catch (error) {
         console.error('Database error:', error);

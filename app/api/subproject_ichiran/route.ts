@@ -1,11 +1,11 @@
 export const runtime = "nodejs";
-import {NextResponse, NextRequest} from 'next/server';
+import {NextResponse} from 'next/server';
 import {checkListPermission, sessionCheck} from "@/lib/services/permission.service";
 import {getSubprojectList} from "@/lib/services/subproject.service";
 
 const TABLE_NAME = "project_joho_ichiran";
 
-export async function GET(request: NextRequest) {
+export async function GET() {
     try {
         // 認証チェック
         const loggedUser = await sessionCheck();
@@ -18,12 +18,9 @@ export async function GET(request: NextRequest) {
 
         const results = await getSubprojectList(permissionList);
 
-        return NextResponse.json({
-            success: true,
-            data: {
-                subprojects: results
-            }
-        }, {status: 200});
+        return NextResponse.json(
+            results,
+            {status: 200});
 
     } catch (error) {
         console.error('Database error:', error);

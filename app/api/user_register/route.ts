@@ -41,7 +41,6 @@ export async function GET(req: NextRequest) {
                     {status: 404}
                 )
             }
-
             return NextResponse.json(
                 result,
                 {status: 200}
@@ -62,8 +61,12 @@ export async function GET(req: NextRequest) {
                     {status: 404}
                 )
             }
-
+            return NextResponse.json(
+                result,
+                {status: 200}
+            );
         }
+
     }
     return NextResponse.json({
         success: false,
@@ -121,10 +124,11 @@ export async function POST(req: NextRequest) {
             }
             const user = parsed.data;
             const user_sys_id = loggedUser.id;
-            const targetId = sys_id ?? user_sys_id;
+            const targetId = sys_id || user_sys_id;
 
             const isSelf = user_sys_id === targetId;
             const isAdmin = loggedUser.roles.includes("admin");
+
             if (!isSelf && !isAdmin) {
                 return NextResponse.json({
                     success: false,

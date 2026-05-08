@@ -12,7 +12,7 @@ import {
 import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
 import {apiFetch} from "@/lib/http";
 import {SubprojectJohoIchiran} from "@/types/record";
-import {Filter, Plus,} from "lucide-react";
+import {Plus} from "lucide-react";
 import {SubprojectJohoIchiranResponse} from "@/types/api";
 import Link from "next/link";
 
@@ -22,6 +22,8 @@ const RECORD_COUNT = (count: number) => `全 ${count} 件のレコード`;
 const SUBPROJECT_API_LINK = "/api/subproject_ichiran";
 const NO_RECORD_MESSAGE = "記録が存在しません";
 const NEW_SUBPROJECT_SHOSAI = "/pms/subproject_shosai?mode=create";
+const UPDATE_SUBPROJECT_SHOSAI = (joi_sys_id: string, sys_id: string) => `/pms/subproject_shosai?mode=update&joi_sys_id=${joi_sys_id}&sys_id=${sys_id}`;
+
 
 export default function UserPage() {
 
@@ -59,9 +61,9 @@ export default function UserPage() {
                     </p>
                 </div>
                 <div className="flex items-center gap-2">
-                    <Button variant="outline" size="sm">
-                        <Filter className="w-4 h-4 mr-2"/> フィルター
-                    </Button>
+                    {/*<Button variant="outline" size="sm">*/}
+                    {/*    <Filter className="w-4 h-4 mr-2"/> フィルター*/}
+                    {/*</Button>*/}
 
                     <Button size="sm" variant="outline" className="h-8 gap-1" asChild>
                         <Link href={NEW_SUBPROJECT_SHOSAI}>
@@ -101,7 +103,9 @@ export default function UserPage() {
                                     recs.map((rec) => (
                                         <TableRow key={rec.sys_id} className="hover:bg-slate-50/50 transition-colors">
                                             <TableCell className="font-medium">
+                                                <Link href={UPDATE_SUBPROJECT_SHOSAI(rec.joi_project_ref, rec.sys_id)}>
                                                 {rec.subproject_id}
+                                                </Link>
                                             </TableCell>
                                             <TableCell className="text-slate-600 text-sm">
                                                 {rec.subproject_name}

@@ -1,6 +1,5 @@
 "use client";
 import {useEffect, useState} from "react";
-import {Button} from "@/components/ui/button";
 import {
     Table,
     TableBody,
@@ -12,18 +11,20 @@ import {
 import {Badge} from "@/components/ui/badge";
 import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
 import {apiFetch} from "@/lib/http";
-import {LoginLogs, Rec} from "@/types/record";
-import {Filter} from "lucide-react";
-import {ApiResponse, LoginLogsResponse} from "@/types/api";
+import {LoginLogs} from "@/types/record";
+import {LoginLogsResponse} from "@/types/api";
+import {useRouter} from "next/navigation";
 
 const TABLE_NAME = "ログイン履歴";
 const TITLE = "システム内のすべての" + TABLE_NAME + "を閲覧・管理できます";
+const INDEX = "/pms/index";
 const RECORD_COUNT = (count: number) => `全 ${count} 件のレコード`;
 const NO_RECORD_MESSAGE = "記録が存在しません";
 const LOGIN_LOGS_API = "/api/login_logs";
 
 export default function UserPage() {
     const [recs, setRecs] = useState<LoginLogs[]>([]);
+    const router = useRouter();
 
     useEffect(() => {
         const fetchData = async () => {
@@ -34,6 +35,7 @@ export default function UserPage() {
 
                 if (!result.success) {
                     console.error(result.error);
+                    router.push(INDEX);
                     return;
                 }
 
@@ -43,11 +45,12 @@ export default function UserPage() {
 
             } catch (error) {
                 console.error("Fetch error:", error);
+                router.push(INDEX);
             }
         };
 
         void fetchData();
-    }, []);
+    }, [router]);
 
     return (
         <main className="p-6 md:p-10 space-y-6 bg-slate-50/30 min-h-screen">
@@ -58,11 +61,11 @@ export default function UserPage() {
                         {TITLE}
                     </p>
                 </div>
-                <div className="flex items-center gap-2">
-                    <Button variant="outline" size="sm">
-                        <Filter className="w-4 h-4 mr-2"/> フィルター
-                    </Button>
-                </div>
+                {/*<div className="flex items-center gap-2">*/}
+                {/*    <Button variant="outline" size="sm">*/}
+                {/*        <Filter className="w-4 h-4 mr-2"/> フィルター*/}
+                {/*    </Button>*/}
+                {/*</div>*/}
             </div>
             <div className="p-6 md:p-10 space-y-6 bg-slate-50/30 min-h-screen">
                 <Card className="shadow-sm border-slate-200">
