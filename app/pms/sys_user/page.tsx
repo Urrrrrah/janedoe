@@ -8,7 +8,7 @@ import {Label} from "@/components/ui/label";
 import {Trash2, Save} from "lucide-react";
 import {apiFetch} from "@/lib/http";
 import {useSearchParams} from "next/dist/client/components/navigation";
-import {useForm} from "react-hook-form";
+import {useForm, useWatch} from "react-hook-form";
 import {useRouter} from "next/navigation";
 import {ApiResponse, SysUserResponse, UpdateResponse} from "@/types/api";
 import {zodResolver} from "@hookform/resolvers/zod";
@@ -26,9 +26,14 @@ export default function ProposalPage() {
         register,
         handleSubmit,
         reset,
-        watch,
+        control,
     } = useForm<SysUserInput>({
         resolver: zodResolver(userSchema),
+    });
+
+    const active = useWatch({
+        control,
+        name: "active",
     });
 
     const router = useRouter();
@@ -111,7 +116,7 @@ export default function ProposalPage() {
                     <p className="text-muted-foreground text-sm">ユーザーの基本情報。</p>
                 </div>
                 <div className="flex gap-3">
-                    {watch('active') && (
+                    {active && (
                         <Button type="button"
                                 variant="outline"
                                 className="text-destructive hover:bg-destructive/10 border-destructive/20"
@@ -119,7 +124,7 @@ export default function ProposalPage() {
                             <Trash2 className="w-4 h-4 mr-2"/> 削除
                         </Button>
                     )}
-                    {(watch('active') || mode === 'create') && (
+                    {(active || mode === 'create') && (
                         <Button className="bg-primary shadow-sm"
                                 onClick={handleSubmit(onSubmit)}>
                             <Save className="w-4 h-4 mr-2"/> 更新

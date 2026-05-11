@@ -61,10 +61,6 @@ export default function UserPage() {
                     </p>
                 </div>
                 <div className="flex items-center gap-2">
-                    {/*<Button variant="outline" size="sm">*/}
-                    {/*    <Filter className="w-4 h-4 mr-2"/> フィルター*/}
-                    {/*</Button>*/}
-
                     <Button size="sm" variant="outline" className="h-8 gap-1" asChild>
                         <Link href={NEW_SUBPROJECT_SHOSAI}>
                             <Plus className="w-4 h-4"/>

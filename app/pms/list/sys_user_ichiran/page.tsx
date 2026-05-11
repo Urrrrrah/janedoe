@@ -60,9 +60,6 @@ export default function UserPage() {
                     </p>
                 </div>
                 <div className="flex items-center gap-2">
-                    {/*<Button variant="outline" size="sm">*/}
-                    {/*    <Filter className="w-4 h-4 mr-2"/> フィルター*/}
-                    {/*</Button>*/}
                 </div>
             </div>
             <div className="p-6 md:p-10 space-y-6 bg-slate-50/30 min-h-screen">

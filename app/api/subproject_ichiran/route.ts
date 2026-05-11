@@ -1,7 +1,7 @@
 export const runtime = "nodejs";
 import {NextResponse} from 'next/server';
-import {checkListPermission, sessionCheck} from "@/lib/services/permission.service";
-import {getSubprojectList} from "@/lib/services/subproject.service";
+import {checkListPermission, sessionCheck} from "@/services/permission.service";
+import {getSubprojectList} from "@/services/subproject.service";
 
 const TABLE_NAME = "project_joho_ichiran";
 

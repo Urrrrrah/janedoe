@@ -1,5 +1,5 @@
 import {prisma} from "../lib/prisma"
-import {generatePasswordHashing, generateSysId} from "@/app/service/generate-util";
+import {generatePasswordHashing, generateSysId} from "@/lib/format_utils";
 
 const ROLE_ADMIN = "admin"
 async function main() {

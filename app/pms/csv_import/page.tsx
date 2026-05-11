@@ -20,7 +20,7 @@ export default function ImprotComponent() {
         const file = e.target.files?.[0];
         if (!file) return;
 
-        // 简单校验文件类型
+        // ファイルの拡張子をチェック
         if (!file.name.endsWith(".csv")) {
             alert("CSVファイルを選択してください");
             return;
@@ -74,10 +74,6 @@ export default function ImprotComponent() {
                 />
 
                 <div className="relative z-10 flex gap-3">
-                    {/*<Button variant="default" className="pointer-events-none">*/}
-                    {/*    ファイルを選択*/}
-                    {/*</Button>*/}
-
                     <Button
                         variant="outline"
                         onClick={downloadTemplate}

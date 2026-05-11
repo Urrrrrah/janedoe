@@ -1,8 +1,8 @@
 export const runtime = "nodejs";
 import {NextResponse, NextRequest} from 'next/server';
-import {checkPermission, sessionCheck} from "@/lib/services/permission.service";
+import {checkPermission, sessionCheck} from "@/services/permission.service";
 import {projectSchema} from "@/lib/validator/project";
-import {createProject, deleteProject, getProjects, updateProject} from "@/lib/services/project.service";
+import {createProject, deleteProject, getProjects, updateProject} from "@/services/project.service";
 
 const SYSTEM_ERROR = 'システムエラー';
 const TABLE_NAME = "project_joho_ichiran";

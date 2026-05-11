@@ -1,7 +1,7 @@
 export const runtime = "nodejs";
 import {NextResponse} from 'next/server';
-import {sessionCheck} from "@/lib/services/permission.service";
-import {getLoginLogs} from "@/lib/services/user.service";
+import {sessionCheck} from "@/services/permission.service";
+import {getLoginLogs} from "@/services/user.service";
 
 const SYSTEM_ERROR = 'システムエラー';
 
@@ -15,12 +15,7 @@ export async function GET() {
             }, {status: 403});
         }
         const results = await getLoginLogs();
-        return NextResponse.json({
-            success: true,
-            data: {
-                logs: results
-            }
-        }, {status: 200});
+        return NextResponse.json(results, {status: 200});
 
     } catch (error) {
         console.error('Database error:', error);

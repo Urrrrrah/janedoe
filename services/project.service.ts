@@ -1,6 +1,6 @@
 import {prisma} from "@/lib/prisma";
-import {generateSysId, timeFormat} from "@/app/service/generate-util";
-import {getUserName, getUserSysId} from "@/app/service/user-util";
+import {generateSysId, timeFormat} from "@/lib/format_utils";
+import {getUserName, getUserSysId} from "@/lib/user_utils";
 import {FormKengenList, ProjectJohoIchiran, ProjectJohoIchiranForm, SubprojectJohoIchiran} from "@/types/record";
 import {projectSchema} from "@/lib/validator/project";
 

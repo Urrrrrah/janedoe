@@ -45,11 +45,6 @@ export type SysUserFormResponse = {
     sysuser: SysUserForm;
 }
 
-export type NewSubprojectResponse = {
-    joi_project_id: string;
-    joi_project_ref: string;
-}
-
 export type ProjectFormResponse = {
     project: ProjectJohoIchiranForm;
     subprojects: SubprojectJohoIchiran[];

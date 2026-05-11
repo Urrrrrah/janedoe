@@ -1,16 +1,12 @@
 export const runtime = "nodejs";
 
-import { NextRequest, NextResponse } from "next/server";
-import {checkListPermission, sessionCheck} from "@/lib/services/permission.service";
-import {getProjectList} from "@/lib/services/project.service";
+import {NextResponse} from "next/server";
+import {checkListPermission, sessionCheck} from "@/services/permission.service";
+import {getProjectList} from "@/services/project.service";
 
 const TABLE_NAME = "project_joho_ichiran";
 
-/**
- * プロジェクト一覧取得API
- * ・ログインユーザーが参照可能なプロジェクトのみ取得
- */
-export async function GET(request: NextRequest) {
+export async function GET() {
     try {
         // 認証チェック
         const loggedUser = await sessionCheck();
