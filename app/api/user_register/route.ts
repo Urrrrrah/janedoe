@@ -4,8 +4,8 @@ export const runtime = "nodejs";
 import {NextRequest, NextResponse} from 'next/server';
 
 import {newUserSchema} from "@/lib/validator/user_register";
-import {createUser, getSysUser, updateUser} from "@/lib/services/user.service";
-import {sessionCheck} from "@/lib/services/permission.service";
+import {createUser, getSysUser, updateUser} from "@/services/user.service";
+import {sessionCheck} from "@/services/permission.service";
 
 const SYSTEM_ERROR = 'システムエラー';
 

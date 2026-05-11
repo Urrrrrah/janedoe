@@ -1,7 +1,7 @@
 export const runtime = "nodejs";
 import {NextResponse} from 'next/server';
-import {getAllUsers} from "@/lib/services/user.service";
-import {sessionCheck} from "@/lib/services/permission.service";
+import {getAllUsers} from "@/services/user.service";
+import {sessionCheck} from "@/services/permission.service";
 
 const SYSTEM_ERROR = 'システムエラー';
 

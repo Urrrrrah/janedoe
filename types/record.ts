@@ -4,7 +4,7 @@ import {subprojectSchema} from "@/lib/validator/subproject";
 import {userSchema} from "@/lib/validator/sysuser";
 import {newUserSchema} from "@/lib/validator/user_register";
 
-
+//DTO用
 export interface Rec {
     sys_id: string;
     created: string;             // datetime
@@ -32,7 +32,7 @@ export interface ProjectJohoIchiran extends Rec {
     department: string;             // varchar(45)
     project_type: string;  // varchar(45)
     project_name: string;      // varchar(45)
-    short_description: string | null; // varchar (允许为空)
+    short_description: string | null; // varchar
 }
 
 export interface FormKengenList {
@@ -41,8 +41,6 @@ export interface FormKengenList {
     name: string;
 }
 
-export type ProjectJohoIchiranForm = z.infer<typeof projectSchema>;
-
 export interface SubprojectJohoIchiran extends Rec {
     subproject_id: string | null;        // varchar(10)
     joi_project_id: string;
@@ -50,14 +48,8 @@ export interface SubprojectJohoIchiran extends Rec {
     start_date: string;     // datetime
     end_date: string;     // datetime
     subproject_name: string;      // varchar(45)
-    short_description: string | null; // varchar (允许为空)
+    short_description: string | null; // varchar
 }
-
-export type SubprojectJohoIchiranForm = z.infer<typeof subprojectSchema>;
-
-export type NewUserForm = z.infer<typeof newUserSchema>;
-
-export type SysUserForm = z.infer<typeof userSchema>;
 
 export interface SysUser extends Rec {
     user_id: string;
@@ -73,3 +65,12 @@ export interface SanshoKengenList extends Rec {
     user_name: string;
     user_sys_id: string;
 }
+
+//front form用
+export type ProjectJohoIchiranForm = z.infer<typeof projectSchema>;
+
+export type SubprojectJohoIchiranForm = z.infer<typeof subprojectSchema>;
+
+export type NewUserForm = z.infer<typeof newUserSchema>;
+
+export type SysUserForm = z.infer<typeof userSchema>;

@@ -1,6 +1,6 @@
 import {prisma} from "@/lib/prisma";
 import {NextResponse} from "next/server";
-import {sessionCheck} from "@/lib/services/permission.service";
+import {sessionCheck} from "@/services/permission.service";
 
 const SYSTEM_ERROR = 'システムエラー';
 

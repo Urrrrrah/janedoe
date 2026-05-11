@@ -1,7 +1,7 @@
 import {NextRequest, NextResponse} from "next/server";
 import {subprojectSchema} from "@/lib/validator/subproject";
-import {checkPermission, sessionCheck} from "@/lib/services/permission.service";
-import {createSubproject, deleteSubproject, getSubproject, updateSubproject} from "@/lib/services/subproject.service";
+import {checkPermission, sessionCheck} from "@/services/permission.service";
+import {createSubproject, deleteSubproject, getSubproject, updateSubproject} from "@/services/subproject.service";
 
 const SYSTEM_ERROR = 'システムエラー';
 const JOI_TABLE = "project_joho_ichiran";

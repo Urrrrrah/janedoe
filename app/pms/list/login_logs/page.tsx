@@ -61,11 +61,6 @@ export default function UserPage() {
                         {TITLE}
                     </p>
                 </div>
-                {/*<div className="flex items-center gap-2">*/}
-                {/*    <Button variant="outline" size="sm">*/}
-                {/*        <Filter className="w-4 h-4 mr-2"/> フィルター*/}
-                {/*    </Button>*/}
-                {/*</div>*/}
             </div>
             <div className="p-6 md:p-10 space-y-6 bg-slate-50/30 min-h-screen">
                 <Card className="shadow-sm border-slate-200">
@@ -82,7 +77,7 @@ export default function UserPage() {
                                 <TableRow className="bg-slate-50/50">
                                     <TableHead className="font-bold">ユーザID</TableHead>
                                     <TableHead className="font-bold">ログイン時間</TableHead>
-                                    <TableHead className="w-[120px] font-bold text-center">ステータス</TableHead>
+                                    <TableHead className="w-30 font-bold text-center">ステータス</TableHead>
                                 </TableRow>
                             </TableHeader>
 

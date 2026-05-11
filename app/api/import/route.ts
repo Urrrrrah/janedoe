@@ -1,13 +1,10 @@
 import {NextRequest, NextResponse} from 'next/server';
 import {z} from "zod";
-import {auth} from "@/lib/auth";
-import {isValidUTF8, projectCsvParser} from "@/lib/services/csv.service";
-import {createProjectsFromCSV} from "@/lib/services/project.service";
+import {isValidUTF8, projectCsvParser} from "@/services/csv.service";
+import {createProjectsFromCSV} from "@/services/project.service";
 import Papa from "papaparse";
 import iconv from "iconv-lite";
-import {sessionCheck} from "@/lib/services/permission.service";
-
-const IMPORT_FAILED = "インポート失敗";
+import {sessionCheck} from "@/services/permission.service";
 
 export async function POST(req: NextRequest) {
     try {

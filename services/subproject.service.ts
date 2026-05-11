@@ -1,6 +1,6 @@
 import {prisma} from "@/lib/prisma";
 import {SubprojectJohoIchiran, SubprojectJohoIchiranForm} from "@/types/record";
-import {generateSysId, timeFormat} from "@/app/service/generate-util";
+import {generateSysId, timeFormat} from "@/lib/format_utils";
 import {subprojectSchema} from "@/lib/validator/subproject";
 
 export async function getSubprojectList(sys_id_list: string[] | null) {
